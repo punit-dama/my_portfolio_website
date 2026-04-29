@@ -1,188 +1,277 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Data Analysis Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Punit Dama | Data Projects</title>
+    <style>
+      .work-hero {
+        padding: 8rem 2rem 4rem;
+        text-align: center;
+        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5), transparent);
+      }
+      
+      .work-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 0;
+      }
+      
+      .dashboard-card {
+        background: var(--clr-card-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+      }
+      
+      @media (min-width: 900px) {
+        .dashboard-card {
+          flex-direction: row;
+          min-height: 420px;
+        }
+        .dashboard-card:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+        .dashboard-image {
+          flex: 1.4;
+        }
+        .dashboard-content {
+          flex: 0.6;
+        }
+      }
+      
+      .dashboard-image {
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.02);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+      }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<div id="intro">
-						<h1>MY WORK</h1>
-						<p></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">DASHBOARS</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">My Dashboards</a></li>
-							<!--<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li> -->
-						</ul>
-						<ul class="icons">
-							<!-- <li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li> -->
-							<!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/karims1/Data-Analyst-Portfolio" class="icon brands fa-github">
-							<span class="label">GitHub</span></a></li> -->
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<!--<span class="date">April 25, 2017</span> -->
-									<h2><a href="https://lookerstudio.google.com/reporting/8fd411ab-b5d3-492c-90f0-86e228367ce9/page/VgD">Business Performance Overview
-
-									</a></h2>
-									<p>
-										This interactive dashboard provides insights into key business metrics, including installs, clicks, and uninstalls, along with CTR, conversion rates, and cost analysis. It highlights top-performing campaigns, cost efficiency, and platform distribution to drive data-driven decisions and optimize marketing performance.</p>
-								</header>
-								<a href="https://lookerstudio.google.com/reporting/8fd411ab-b5d3-492c-90f0-86e228367ce9/page/VgD" class="image main"><img src="images/overview_report.png" alt="idk why" /></a>
-								<!-- <ul class="actions special">
-									<li><a href="#" class="button large">VIEW PROJECT</a></li>
-								</ul> -->
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<!--<span class="date">April 18, 2017</span>-->
-										<h2><a href="https://lookerstudio.google.com/reporting/28958f7b-4053-4452-8ee2-1240f28a5a32/page/XkEND">Uninstall Trends Dashboard<br /></a></h2>
-									</header>
-									<a href="https://lookerstudio.google.com/reporting/28958f7b-4053-4452-8ee2-1240f28a5a32/page/XkEND" class="image fit"><img src="images/uninstall_img.png" alt="" /></a>
-									<p>This dashboard provides a comprehensive analysis of app uninstalls among Android users, highlighting key metrics such as total uninstalls, uninstall rates, and the average time before users leave the app. It also visualizes month-wise trends and recent shifts, offering valuable insights into user retention and engagement patterns.</p>
-									<!-- <ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul> -->
-								</article>
-								<article>
-									<header>
-										<!--<span class="date">April 24, 2017</span>-->
-										<h2><a href="https://lookerstudio.google.com/reporting/9e69171d-f60b-446a-901c-b6d39e7d4250/page/cmZ2D/edit">User Assessment Dahboard<br /></a></h2>
-									</header>
-									<a href="https://lookerstudio.google.com/reporting/9e69171d-f60b-446a-901c-b6d39e7d4250/page/cmZ2D/edit" class="image fit"><img src="images/s_ms_cohort.png" alt="" /></a>
-									<p>This User Assessment Dashboard provides a detailed overview of assessment attempts, completions, and conversion rates over different timeframes—since inception, monthly, weekly, and daily. It highlights key performance metrics such as the total number of assessments attempted and completed, along with real-time trends in user engagement. The interactive visualizations showcase day-wise trends in assessment activity and conversion rates, while the average time to assessment offers insights into user efficiency.This dashboard serves as a valuable tool for monitoring user participation and refining engagement strategies.</p>
-									<!-- <ul class="actions special">
-										<li><a href="#" class="button">VIEW PROJECT</a></li>
-									</ul> -->
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://lookerstudio.google.com/reporting/a9781e56-2b38-4cac-b730-e109700a5aa7/page/RmUGE">Customer Cohorts Dashboard</h2>
-									</header>
-									<a href="https://lookerstudio.google.com/reporting/a9781e56-2b38-4cac-b730-e109700a5aa7/page/RmUGE" class="image fit"><img src="images/cohorts_dashboard_final.png" alt="" /></a>
-									<p>This Customer Cohorts Dashboard categorizes users based on their responses to assessments, financial behaviors, and genuineness scores. It tracks multiple cohorts derived from user interactions, investment tendencies, insurance coverage, spending habits, and risk-handling abilities. By analyzing these segments, the dashboard provides a data-driven approach to understanding user needs, optimizing engagement strategies, and offering personalized financial guidance.</p>
-									<!-- <ul class="actions special">
-										<li><a href="#" class="button">VIEW PROJECT</a></li>
-									</ul> -->
-								</article>
-								<article>
-									<header>
-										<!-- <span class="date">April 14, 2017</span> -->
-										<h2><a href="https://lookerstudio.google.com/reporting/eb4e05db-5e68-4e37-82e8-4a3cf0e0f54f/page/p_h4zv9bgn3c/edit">Communication & System Performance Dashboard<br />
-										</a></h2>
-									</header>
-									<a href="https://lookerstudio.google.com/reporting/eb4e05db-5e68-4e37-82e8-4a3cf0e0f54f/page/p_h4zv9bgn3c/edit" class="image fit"><img src="images/engg_monitoring_report.png" alt="" /></a>
-									<p>This dashboard monitors key engineering metrics alongside communication performance, analyzing messages sent via different channels (WhatsApp, Email, and SMS). It tracks delivery success rates, failures, and processing times while providing insights into system efficiency and user engagement. By assessing service performance and campaign effectiveness, this dashboard helps optimize communication strategies and ensure seamless message delivery.</p>
-									<!-- <ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul> -->
-								</article>
-								<!-- <article> -->
-									<!--<header> -->
-										<!-- <span class="date">April 11, 2017</span> -->
-									<!-- <h2><a href="#">STATISTICAL ANALYSIS<br />
-										USING EXCEL</a></h2> -->
-									<!--</header> -->
-									<!--<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a> -->
-								<!--<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p> -->
-									<!-- <ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul> -->
-							<!--	</article> 
-								<article> -->
-									<!--<header> -->
-										<!-- <span class="date">April 7, 2017</span> -->
-										<!-- <h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2> -->
-									<!--</header> -->
-									<!-- <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>-->
-									<!-- <ul class="actions special"> 
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul> -->
-								<!-- </article> -->
-							</section>
-
-						<!-- Footer -->
-							<!-- <footer>
-								<div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer> -->
-
-					</div> 
-
-				<!-- Footer -->
-<footer id="footer">
-    <section>
-        <h3>Contact Me</h3>
-        <p>Email: <a href="mailto:your.email@example.com">payal28anand@gmail.com</a></p>
-        <p>Phone: +91-9326916198</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/payal-soni-28-2OO3/" target="_blank">Let's Connect</a></p>
-        <ul class="actions">
-            <li><a href="mailto:your.email@example.com" class="button">Email</a></li>
+      .dashboard-card:nth-child(even) .dashboard-image {
+        border-right: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .dashboard-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease;
+      }
+      
+      .dashboard-card:hover .dashboard-image img {
+        transform: scale(1.02);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+      
+      .dashboard-content {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .dashboard-tag {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: rgba(96, 165, 250, 0.1);
+        color: var(--clr-primary);
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        width: fit-content;
+      }
+      
+      .dashboard-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--clr-fg-alt);
+      }
+      
+      .dashboard-desc {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        color: var(--clr-fg);
+      }
+      
+      .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        color: var(--clr-primary);
+        font-weight: 500;
+        transition: gap 0.3s ease;
+      }
+      
+      .back-home:hover {
+        gap: 0.8rem;
+      }
+    </style>
+  </head>
+  <body id="top">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="index.html" class="link link--nav">Home</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="index.html#projects" class="link link--nav">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="index.html#experience" class="link link--nav">Experience</a>
+          </li>
         </ul>
-    </section> 
-</footer>
 
-<script>
-    document.getElementById("interestedButton").addEventListener("click", function() {
-        window.location.href = "mailto:your.email@example.com?subject=Interested in Your Work&body=Hi, I would like to connect with you!";
-    });
-</script>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon" id="theme-toggle">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
 
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <main>
+      <section class="work-hero container">
+        <a href="index.html" class="back-home">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <h1 class="section__title">My Data Portfolio</h1>
+        <p class="section__desc">A deep dive into the dashboards, ETL pipelines, and analytical tools I've built to drive business intelligence.</p>
+      </section>
 
-	</body>
+      <section class="container" style="padding-bottom: 5rem;">
+        <div class="work-grid">
+          
+          <!-- Dashboard 1: Campaign Analytics -->
+          <div class="dashboard-card">
+            <div class="dashboard-image">
+              <img src="images/overview_report.png" alt="Campaign Analytics" />
+            </div>
+            <div class="dashboard-content">
+              <span class="dashboard-tag">Marketing BI</span>
+              <h2 class="dashboard-title">Campaign Analytics</h2>
+              <p class="dashboard-desc">
+                This interactive dashboard provides insights into key business metrics, including installs, clicks, and uninstalls, along with CTR, conversion rates, and cost analysis. It highlights top-performing campaigns, cost efficiency, and platform distribution to drive data-driven decisions.
+              </p>
+              <div class="project__btns">
+                <a href="https://datastudio.google.com/u/0/reporting/8fd411ab-b5d3-492c-90f0-86e228367ce9/page/VgD" target="_blank" class="btn btn--outline">Live Preview</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard 2: Uninstall Trends -->
+          <div class="dashboard-card">
+            <div class="dashboard-image">
+              <img src="images/uninstall_img.png" alt="Uninstall Trends" />
+            </div>
+            <div class="dashboard-content">
+              <span class="dashboard-tag">User Retention</span>
+              <h2 class="dashboard-title">Uninstall Trends Dashboard</h2>
+              <p class="dashboard-desc">
+                A comprehensive analysis of app uninstalls among Android users, highlighting metrics such as total uninstalls, uninstall rates, and average time before departure. Visualizes month-wise trends and recent shifts to identify retention triggers.
+              </p>
+              <div class="project__btns">
+                <a href="https://datastudio.google.com/u/0/reporting/28958f7b-4053-4452-8ee2-1240f28a5a32/page/XkEND" target="_blank" class="btn btn--outline">View Report</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard 3: User Assessment -->
+          <div class="dashboard-card">
+            <div class="dashboard-image">
+              <img src="images/s_ms_cohort.png" alt="User Assessment" />
+            </div>
+            <div class="dashboard-content">
+              <span class="dashboard-tag">Product Analytics</span>
+              <h2 class="dashboard-title">User Assessment Dashboard</h2>
+              <p class="dashboard-desc">
+                Tracks assessment attempts, completions, and conversion rates over different timeframes. Highlights key engagement metrics and real-time trends in user participation, serving as a vital tool for refining product engagement strategies.
+              </p>
+              <div class="project__btns">
+                <a href="https://lookerstudio.google.com/reporting/9e69171d-f60b-446a-901c-b6d39e7d4250/page/cmZ2D" target="_blank" class="btn btn--outline">Explore Data</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard 4: Customer Cohorts -->
+          <div class="dashboard-card">
+            <div class="dashboard-image">
+              <img src="images/cohorts_dashboard_final.png" alt="Customer Cohorts" />
+            </div>
+            <div class="dashboard-content">
+              <span class="dashboard-tag">Segmentation</span>
+              <h2 class="dashboard-title">Customer Cohorts Dashboard</h2>
+              <p class="dashboard-desc">
+                Categorizes users based on financial behaviors, investment tendencies, and genuineness scores. Tracks multiple cohorts derived from risk-handling abilities and spending habits to provide personalized financial guidance.
+              </p>
+              <div class="project__btns">
+                <a href="https://lookerstudio.google.com/reporting/a9781e56-2b38-4cac-b730-e109700a5aa7/page/RmUGE" target="_blank" class="btn btn--outline">Full Analysis</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container contact__content">
+        <h2 class="section__title" style="font-size: 2.2rem; margin-bottom: 1rem;">Let's Connect</h2>
+        <p class="contact__desc">Interested in data-driven insights for your business? Let's talk.</p>
+        
+        <div class="contact__list">
+          <a href="mailto:punitddama@gmail.com" class="contact__item">
+            <i class="fas fa-envelope"></i>
+            <span>punitddama@gmail.com</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/punit-dama/" target="_blank" class="contact__item">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/punit-dama" target="_blank" class="contact__item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+          <a href="tel:+918097140570" class="contact__item">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 80971 40570</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

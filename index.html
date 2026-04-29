@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
+    <meta name="description" content="Punit Dama - Data Analyst Portfolio" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -15,237 +15,237 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Payal soni</title>
+    <title>Punit Dama | Data Analyst</title>
   </head>
-  <body class="light" id="top">
-    <header class="header center">
-
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#work">My Work</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
+  <body id="top">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item"><a class="link--nav" href="#projects">Projects</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="#skills">Skills</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="#work">Experience</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="#contact">Contact</a></li>
         </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <div class="slider round">
+              <div class="stars"></div>
+              <div class="clouds"></div>
+            </div>
+          </label>
+        </div>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
+        <div class="nav__hamburger">
           <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
+        </div>
       </nav>
     </header>
 
     <main>
       <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Payal Soni</span></h1>
+      <section class="about">
+        <h1>Hi, I am <span class="about__name">Punit Dama</span></h1>
         <p class="about__desc">
-          I am a passionate data enthusiast with a strong skill set in data analysis, machine learning, and data visualization.
-          Experienced in extracting, transforming, and uncovering valuable insights from data 
-          using Python, its libraries, as well as SQL and other advanced technologies.
+          Data Analyst with 3+ years of experience transforming complex datasets into actionable business strategies. 
+          Specializing in SQL, Python, and Power BI with a passion for automation and Generative AI.
         </p>
-        <h3 class="about__role">Data Analytics • Data Visualization</h3><br>
-        <h4>
-          <i aria-hidden="true" class="fa fa-line-chart"></i>
-           •
-           <i aria-hidden="true" class="fa fa-bar-chart"></i>
-           •
-           <i aria-hidden="true" class="fa fa-pie-chart"></i>
-           •
-           <i aria-hidden="true" class="fa fa-area-chart"></i>
-          </h4>
-
-
-        <div class="about__contact center">
-          <a href="https://drive.google.com/file/d/16HrGGLvRzTvkOYsbM3AA4QORUB-SKezz/view?usp=drive_link">
-            <span class="btn btn--outline">Resume</span>
+        
+        <div class="about__contact">
+          <a href="Punit_Dama_Data_Analyst.pdf" target="_blank" class="btn btn--outline">
+            Download Resume
           </a>
 
-          <a
-            href="https://github.com/payal-soni28"
-            aria-label="github"
-            class="link link--icon"
-          >
+          <a href="https://github.com" aria-label="github" class="link--icon">
             <i aria-hidden="true" class="fab fa-github"></i>
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/payal-soni-28-2OO3/"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
+          <a href="https://www.linkedin.com/in/punit-dama/" aria-label="linkedin" class="link--icon">
             <i aria-hidden="true" class="fab fa-linkedin"></i>
           </a>
         </div>
-      </div>
+      </section>
 
       <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
+      <section id="projects" class="section">
+        <h2 class="section__title">Featured Projects</h2>
 
         <div class="projects__grid">
-          <div class="project">
-            <h3>Disaster Tweets Classification</h3>
-            <p class="">
-              Developed a machine learning model to classify tweets as either related to real disasters or not.
-             Leveraged a dataset from Kaggle's NLP Getting Started Competition.
-             The ensemble model, combining Multinomial Naive Bayes, Logistic Regression, and Support Vector Machine classifiers.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">python</li>
-              <li class="project__stack-item">sci_kit learn</li>
-              <li class="project__stack-item">jupyter</li>
-              <li class="project__stack-item">NLTK</li>
-            </ul>
+          <article class="project">
+            <h3>Multi-Channel Campaign Analytics</h3>
+            <p>Architected an automated ETL pipeline integrating multi-channel marketing data into BigQuery. <strong>Reduced reporting time by 80%</strong> and improved data processing speed by 40% across 5M+ records to optimize cross-channel spend.</p>
+            <div class="project__stack">
+              <span class="project__stack-item">GCP</span>
+              <span class="project__stack-item">BigQuery</span>
+              <span class="project__stack-item">Airflow</span>
+              <span class="project__stack-item">Python</span>
+            </div>
+            <div class="about__contact" style="margin-top: auto; padding-top: 1rem;">
+               <a href="#" class="link--icon"><i class="fab fa-github"></i></a>
+            </div>
+          </article>
 
-            <a
-              href="https://github.com/payal-soni28/NLP-with-Disaster-Tweets"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://github.com/payal-soni28/NLP-with-Disaster-Tweets/blob/main/tweets_pred.ipynb"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
+          <article class="project">
+            <h3>Banking KPI Analytics Platform</h3>
+            <p>Engineered high-performance BI solutions for US banking clients, <strong>analyzing 1M+ transactions</strong> to track product penetration. Delivered real-time dashboards that optimized branch performance and customer wealth analysis.</p>
+            <div class="project__stack">
+              <span class="project__stack-item">Power BI</span>
+              <span class="project__stack-item">SQL</span>
+              <span class="project__stack-item">DAX</span>
+              <span class="project__stack-item">PostgreSQL</span>
+            </div>
+            <div class="about__contact" style="margin-top: auto; padding-top: 1rem;">
+               <a href="#" class="link--icon"><i class="fab fa-github"></i></a>
+            </div>
+          </article>
 
-          <div class="project">
-            <h3>SQL Data Analysis</h3>
-            <p class="">
-              This project involves conducting a comprehensive Exploratory Data Analysis (EDA) on the Zomato Restaurant Dataset, sourced 
-              from the popular online food delivery platform Zomato. The primary objective is to gain insights into 
-              various aspects of the dataset, including restaurant ratings, services offered (online orders and table bookings), and cost analysis.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">SQL</li>
-              <li class="project__stack-item">MySQL</li>
-            </ul>
-
-            <a
-              href="https://github.com/payal-soni28/SQL_data_analysis"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://github.com/payal-soni28/SQL_data_analysis/blob/main/DATA_ANALYSIS.sql"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>Twitter Sentiment analysis</h3>
-            <p class="">
-              Sentiment analysis, a crucial aspect of Natural Language Processing (NLP), is employed to discern sentiments expressed in text.
-               This project contributes to Twitter's efforts to combat platform misuse by creating a robust NLP-based classifier,
-                aiming to identify and address negative tweets effectively.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Python</li>
-              <li class="project__stack-item">Jupyter</li>
-              <li class="project__stack-item">Scikit-learn</li>
-              <li class="project__stack-item">nltk</li>
-            </ul>
-
-            <a
-              href="https://github.com/payal-soni28/Twitter-Sentiment-analysis"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://github.com/payal-soni28/Twitter-Sentiment-analysis/blob/main/Sentiment-analysis.ipynb"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
+          <article class="project">
+            <h3>GenAI & Financial Automation</h3>
+            <p>Built a full-stack automation platform reducing manual effort by <strong>100+ hours/month (60% gain)</strong>. Leveraged LLMs to improve document extraction speed by 3x, automating <strong>80%+ of transaction reconciliation</strong> workflows.</p>
+            <div class="project__stack">
+              <span class="project__stack-item">LLM</span>
+              <span class="project__stack-item">Python</span>
+              <span class="project__stack-item">FastAPI</span>
+              <span class="project__stack-item">Vector DB</span>
+            </div>
+            <div class="about__contact" style="margin-top: auto; padding-top: 1rem;">
+               <a href="#" class="link--icon"><i class="fab fa-github"></i></a>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">Python</li>
-          <li class="skills__list-item btn btn--plain">SQL</li>
-          <li class="skills__list-item btn btn--plain">Dashboarding</li>
-          <li class="skills__list-item btn btn--plain">Advanced Excel</li>
-          <li class="skills__list-item btn btn--plain">Google Analytics</li>
-          <li class="skills__list-item btn btn--plain">GBQ</li>
-          <li class="skills__list-item btn btn--plain">Sci-Kit Learn</li>
-          <li class="skills__list-item btn btn--plain">EDA</li>
+      <section id="skills" class="section">
+        <h2 class="section__title">Technical Expertise</h2>
+        <div class="skills__container">
+          
+          <div class="skills__category">
+            <h3><i class="fas fa-code"></i> Programming & Databases</h3>
+            <ul class="skills__list">
+              <li class="skills__list-item">Python (Pandas, NumPy)</li>
+              <li class="skills__list-item">SQL (PostgreSQL, BigQuery)</li>
+              <li class="skills__list-item">FastAPI</li>
+              <li class="skills__list-item">MySQL</li>
+              <li class="skills__list-item">Gen AI & RAG</li>
+            </ul>
+          </div>
 
-        </ul>
+          <div class="skills__category">
+            <h3><i class="fas fa-chart-line"></i> Advanced Analytics</h3>
+            <ul class="skills__list skills__list--2col">
+              <li class="skills__list-item">Exploratory Data Analysis</li>
+              <li class="skills__list-item">Data Storytelling</li>
+              <li class="skills__list-item">Root Cause Analysis</li>
+              <li class="skills__list-item">Hypothesis Testing</li>
+              <li class="skills__list-item">A/B Testing</li>
+              <li class="skills__list-item">Cohort Analysis</li>
+              <li class="skills__list-item">Funnel Analysis</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3><i class="fas fa-chart-pie"></i> Visualization & BI</h3>
+            <ul class="skills__list">
+              <li class="skills__list-item">Power BI & DAX</li>
+              <li class="skills__list-item">Tableau</li>
+              <li class="skills__list-item">Looker Studio</li>
+              <li class="skills__list-item">Automated Reporting</li>
+              <li class="skills__list-item">Advanced Excel</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3><i class="fas fa-cloud"></i> Cloud & Engineering</h3>
+            <ul class="skills__list">
+              <li class="skills__list-item">GCP (Google Cloud)</li>
+              <li class="skills__list-item">Apache Airflow</li>
+              <li class="skills__list-item">ETL/ELT Pipelines</li>
+              <li class="skills__list-item">GitHub</li>
+              <li class="skills__list-item">Docker</li>
+            </ul>
+          </div>
+
+        </div>
       </section>
 
-      <section class="section contact center" id="work">
-        <h2 class="section__title">Work</h2>
-        <a href="index_work.html">
-          <span class="btn btn--outline">Dashboards</span>
-        </a>
+       <!-- Experience -->
+      <section id="experience" class="section">
+        <h2 class="section__title">Experience</h2>
+        <div class="projects__grid" style="grid-template-columns: 1fr;">
+          <div class="project" style="flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem;">
+            <div style="flex: 1;">
+              <h3 style="margin: 0; color: var(--clr-primary);">Aunalytics AI</h3>
+              <p style="margin-bottom: 0; font-size: 0.85rem;"><strong>Data Analyst</strong></p>
+            </div>
+            <div style="flex: 2;">
+              <p style="font-size: 0.95rem;">Developed <strong>15+ interactive BI dashboards</strong> for major <strong>US banking clients</strong>, processing <strong>1M+ records</strong> to deliver deep MoM/YoY insights and automating ETL workflows for a significant boost in reporting efficiency.</p>
+            </div>
+            <div style="text-align: right; flex: 1;">
+              <p style="font-size: 0.9rem; opacity: 0.8;">04/2025 - 03/2026</p>
+            </div>
+          </div>
+
+          <div class="project" style="flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem;">
+            <div style="flex: 1;">
+              <h3 style="margin: 0; color: var(--clr-primary);">Atrina Technologies</h3>
+              <p style="margin-bottom: 0; font-size: 0.85rem;"><strong>Data Engineer</strong></p>
+            </div>
+            <div style="flex: 2;">
+              <p style="font-size: 0.95rem;">Developed <strong>30+ ETL pipelines on GCP</strong> to centralize multi-source data into BigQuery. Optimized SQL queries on <strong>5M+ records</strong> to reduce execution time by 30%, supporting large-scale campaign analysis.</p>
+            </div>
+            <div style="text-align: right; flex: 1;">
+              <p style="font-size: 0.9rem; opacity: 0.8;">04/2023 - 03/2025</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="index_work.html" class="btn btn--outline">View Interactive Dashboards</a>
+        </div>
       </section>
 
       <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:payal28anand@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
+      <section id="contact" class="section">
+        <div class="contact__content">
+          <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 1rem;">Let's Connect</h2>
+          <p class="contact__desc">
+            Let's turn your data into actionable insights. Reach out and let's build something impactful together.
+          </p>
+          
+          <div class="contact__list">
+            <a href="mailto:punitddama@gmail.com" class="contact__item">
+              <i class="fas fa-envelope"></i>
+              <span>punitddama@gmail.com</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/punit-dama/" target="_blank" class="contact__item">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/punit-dama" target="_blank" class="contact__item">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+
+            <a href="tel:+918097140570" class="contact__item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 80971 40570</span>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <!-- Apply space between classes -->
-<div class="center margin-bottom">
-  <!-- your content -->
-</div>
-
-<!-- Apply padding at the end -->
-<div class="padding-at-the-end"></div>
-
-<!-- Apply padding to specific elements -->
-<div class="project padding-bottom">
-  <!-- your project content -->
-</div>
-
-    <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
-    </div>
-    </div>
+    <a aria-label="Scroll up" href="#top" class="scroll-top">
+      <i aria-hidden="true" class="fas fa-arrow-up"></i>
+    </a>
 
     <script src="./script.js"></script>
     <footer>
-      Payal Soni ❤️
-  </footer>
-
+      Designed & Built by Punit Dama ❤️ 2026
+    </footer>
   </body>
 </html>
