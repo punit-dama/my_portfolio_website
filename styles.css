@@ -184,7 +184,7 @@ main {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 .section__title {
@@ -204,7 +204,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 4rem 0;
+  padding: 4.5rem 0 2rem 0;
 }
 
 .about__name {
