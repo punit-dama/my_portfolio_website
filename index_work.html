@@ -20,7 +20,7 @@
       .work-hero {
         padding: 8rem 2rem 4rem;
         text-align: center;
-        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5), transparent);
+        background: radial-gradient(circle at center, rgba(13, 148, 136, 0.2) 0%, transparent 75%);
       }
       
       .work-grid {
@@ -32,13 +32,19 @@
       
       .dashboard-card {
         background: var(--clr-card-bg);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(13, 148, 136, 0.25);
         border-radius: var(--border-radius);
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        transition: transform 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .dashboard-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(13, 148, 136, 0.3);
+        border-color: rgba(13, 148, 136, 0.6);
       }
       
       @media (min-width: 900px) {
@@ -60,17 +66,17 @@
       .dashboard-image {
         position: relative;
         overflow: hidden;
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(13, 148, 136, 0.05);
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0.75rem;
-        border-right: 1px solid rgba(255, 255, 255, 0.05);
+        border-right: 1px solid rgba(13, 148, 136, 0.2);
       }
 
       .dashboard-card:nth-child(even) .dashboard-image {
         border-right: none;
-        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        border-left: 1px solid rgba(13, 148, 136, 0.2);
       }
       
       .dashboard-image img {
@@ -96,20 +102,29 @@
       
       .dashboard-tag {
         display: inline-block;
-        padding: 0.4rem 1rem;
-        background: rgba(96, 165, 250, 0.1);
-        color: var(--clr-primary);
+        padding: 0.3rem 1rem;
+        background: rgba(13, 148, 136, 0.15);
+        color: var(--clr-accent);
+        border: 1px solid rgba(13, 148, 136, 0.4);
         border-radius: 50px;
+        transition: 0.3s;
         font-size: 0.8rem;
         font-weight: 500;
         margin-bottom: 1rem;
         width: fit-content;
       }
       
+      .dashboard-tag:hover {
+        background: var(--grad-primary);
+        color: #000;
+        border-color: transparent;
+      }
       .dashboard-title {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-        color: var(--clr-fg-alt);
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
       
       .dashboard-desc {
@@ -124,7 +139,9 @@
         align-items: center;
         gap: 0.5rem;
         margin-bottom: 2rem;
-        color: var(--clr-primary);
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-weight: 500;
         transition: gap 0.3s ease;
       }
@@ -138,34 +155,41 @@
     <header class="header">
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__list-item">
-            <a href="index.html" class="link link--nav">Home</a>
-          </li>
-          <li class="nav__list-item">
-            <a href="index.html#projects" class="link link--nav">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a href="index.html#experience" class="link link--nav">Experience</a>
-          </li>
+          <li class="nav__list-item"><a class="link--nav" href="index.html">Home</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="index_work.html">Dashboards</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="index.html#projects">Projects</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="index.html#skills">Skills</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="index.html#experience">Experience</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="index.html#contact">Contact</a></li>
         </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon" id="theme-toggle">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <div class="slider round">
+              <div class="stars"></div>
+              <div class="clouds"></div>
+            </div>
+          </label>
+        </div>
 
-        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <div class="nav__hamburger">
           <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="work-hero container">
-        <a href="index.html" class="back-home">
-          <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
+        <div style="text-align: left; width: 100%;">
+          <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i> Back to Home
+          </a>
+        </div>
         <h1 class="section__title">My Data Portfolio</h1>
-        <p class="section__desc">A deep dive into the dashboards, ETL pipelines, and analytical tools I've built to drive business intelligence.</p>
+        <p class="section__desc" style="color: rgba(255, 255, 255, 0.65); max-width: 650px; margin: 1.5rem auto 0; font-size: 1.15rem; line-height: 1.6; text-align: center;">
+          A deep dive into the dashboards, ETL pipelines, and analytical tools I've built to drive business intelligence.
+        </p>
       </section>
 
       <section class="container" style="padding-bottom: 5rem;">
@@ -199,6 +223,7 @@
               <p class="dashboard-desc">
                 A comprehensive analysis of app uninstalls among Android users, highlighting metrics such as total uninstalls, uninstall rates, and average time before departure. Visualizes month-wise trends and recent shifts to identify retention triggers.
               </p>
+              
               <div class="project__btns">
                 <a href="https://datastudio.google.com/u/0/reporting/28958f7b-4053-4452-8ee2-1240f28a5a32/page/XkEND" target="_blank" class="btn btn--outline">View Report</a>
               </div>
@@ -239,6 +264,15 @@
             </div>
           </div>
 
+        </div>
+      </section>
+      
+      <section class="container" style="padding: 2rem 0 5rem 0; text-align: center;">
+        <div style="padding: 2rem; background: rgba(13, 148, 136, 0.03); border: 1px solid rgba(13, 148, 136, 0.1); border-radius: 12px; max-width: 800px; margin: 0 auto; position: relative;">
+          <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--clr-primary); opacity: 0.2; margin-bottom: 1rem; display: block;"></i>
+          <p style="margin: 0; font-size: 1.25rem; font-style: italic; color: var(--clr-fg); line-height: 1.6; font-weight: 500;">
+            "A click tells you a user arrived, but <span style="color: var(--clr-primary);">retention</span> tells you if they found value. Great product analytics moves past vanity metrics to optimize <span style="color: var(--clr-primary);">conversions</span>, minimize <span style="color: var(--clr-primary);">churn</span>, and maximize <span style="color: var(--clr-primary);">LTV</span>."
+          </p>
         </div>
       </section>
     </main>

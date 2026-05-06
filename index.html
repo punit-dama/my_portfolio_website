@@ -21,9 +21,11 @@
     <header class="header">
       <nav class="nav">
         <ul class="nav__list">
+          <li class="nav__list-item"><a class="link--nav" href="index.html">Home</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="index_work.html">Dashboards</a></li>
           <li class="nav__list-item"><a class="link--nav" href="#projects">Projects</a></li>
           <li class="nav__list-item"><a class="link--nav" href="#skills">Skills</a></li>
-          <li class="nav__list-item"><a class="link--nav" href="#work">Experience</a></li>
+          <li class="nav__list-item"><a class="link--nav" href="#experience">Experience</a></li>
           <li class="nav__list-item"><a class="link--nav" href="#contact">Contact</a></li>
         </ul>
 
@@ -46,24 +48,30 @@
     <main>
       <!-- About -->
       <section class="about">
-        <h1>Hi, I am <span class="about__name">Punit Dama</span></h1>
-        <p class="about__desc">
-          Data Analyst with 3+ years of experience transforming complex datasets into actionable business strategies. 
-          Specializing in SQL, Python, and Power BI with a passion for automation and Generative AI.
-        </p>
+        <h1>Hi, I'm <span class="about__name">Punit Dama</span></h1>
+        <h2 class="about__role">DATA ANALYST</h2>
+        <div style="background: rgba(13, 148, 136, 0.05); border: 1px solid rgba(13, 148, 136, 0.15); border-radius: 12px; padding: 1.5rem 2rem; max-width: 800px; margin: 2rem 0; position: relative;">
+          <i class="fas fa-quote-left" style="position: absolute; top: 1.5rem; left: 1.5rem; font-size: 1.5rem; color: var(--clr-primary); opacity: 0.15;"></i>
+          <p class="about__desc" style="line-height: 1.8; color: rgba(255, 255, 255, 0.65); font-size: 1.15rem; margin: 0; position: relative; z-index: 1;">
+            3+ years of experience in <strong style="color: var(--clr-primary); font-weight: 600;">Python</strong>, <strong style="color: var(--clr-primary); font-weight: 600;">SQL</strong>, and <strong style="color: var(--clr-primary); font-weight: 600;">Power BI</strong>, delivering actionable insights and KPI reporting. 
+            Skilled in building dashboards to drive data-driven decisions, with a growing focus on leveraging <strong style="color: var(--clr-primary); font-weight: 600;">Generative AI</strong> and <strong style="color: var(--clr-primary); font-weight: 600;">LLMs</strong> for business automation.
+          </p>
+        </div>
         
-        <div class="about__contact">
+        <div class="about__contact" style="flex-direction: column; gap: 1.5rem;">
           <a href="Punit_Dama_Data_Analyst.pdf" target="_blank" class="btn btn--outline">
             Download Resume
           </a>
 
-          <a href="https://github.com" aria-label="github" class="link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+          <div style="display: flex; gap: 1.5rem; justify-content: center;">
+            <a href="https://github.com" aria-label="github" class="link--icon">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
 
-          <a href="https://www.linkedin.com/in/punit-dama/" aria-label="linkedin" class="link--icon">
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
+            <a href="https://www.linkedin.com/in/punit-dama/" aria-label="linkedin" class="link--icon">
+              <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -82,7 +90,7 @@
               <span class="project__stack-item">Python</span>
             </div>
             <div class="about__contact" style="margin-top: auto; padding-top: 1rem;">
-               <a href="#" class="link--icon"><i class="fab fa-github"></i></a>
+               <a href="index_work.html" class="link--icon" title="View Dashboard"><i class="fas fa-chart-line"></i></a>
             </div>
           </article>
 
@@ -96,7 +104,7 @@
               <span class="project__stack-item">PostgreSQL</span>
             </div>
             <div class="about__contact" style="margin-top: auto; padding-top: 1rem;">
-               <a href="#" class="link--icon"><i class="fab fa-github"></i></a>
+               <a href="index_work.html" class="link--icon" title="View Dashboard"><i class="fas fa-chart-line"></i></a>
             </div>
           </article>
 
@@ -110,7 +118,7 @@
               <span class="project__stack-item">Vector DB</span>
             </div>
             <div class="about__contact" style="margin-top: auto; padding-top: 1rem;">
-               <a href="#" class="link--icon"><i class="fab fa-github"></i></a>
+               <a href="index_work.html" class="link--icon" title="View Dashboard"><i class="fas fa-chart-line"></i></a>
             </div>
           </article>
         </div>
@@ -174,29 +182,47 @@
       <section id="experience" class="section">
         <h2 class="section__title">Experience</h2>
         <div class="projects__grid" style="grid-template-columns: 1fr;">
-          <div class="project" style="flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem;">
-            <div style="flex: 1;">
-              <h3 style="margin: 0; color: var(--clr-primary);">Aunalytics AI</h3>
-              <p style="margin-bottom: 0; font-size: 0.85rem;"><strong>Data Analyst</strong></p>
+          <div class="project" style="display: flex; flex-direction: column; gap: 1rem; padding: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(13, 148, 136, 0.2); padding-bottom: 1rem; margin-bottom: 0.5rem;">
+              <div>
+                <h3 style="margin: 0; font-size: 1.5rem; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Aunalytics AI</h3>
+                <p style="margin: 0.3rem 0 0 0; font-size: 1.05rem; color: var(--clr-fg-alt); font-weight: 500;">Data Analyst</p>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-size: 0.85rem; font-family: 'Space Grotesk', monospace; background: rgba(13, 148, 136, 0.1); padding: 0.4rem 1rem; border-radius: 20px; color: var(--clr-accent); border: 1px solid rgba(13, 148, 136, 0.3);">04/2025 - 03/2026</span>
+              </div>
             </div>
-            <div style="flex: 2;">
-              <p style="font-size: 0.95rem;">Developed <strong>15+ interactive BI dashboards</strong> for major <strong>US banking clients</strong>, processing <strong>1M+ records</strong> to deliver deep MoM/YoY insights and automating ETL workflows for a significant boost in reporting efficiency.</p>
-            </div>
-            <div style="text-align: right; flex: 1;">
-              <p style="font-size: 0.9rem; opacity: 0.8;">04/2025 - 03/2026</p>
+            
+            <div style="width: 100%;">
+              <ul class="experience-list">
+                <li>Built and maintained <strong>15+ BI dashboards</strong> for US banking clients (First Source Bank, CFCU, Three Rivers) using Aunsight, Power BI, covering transaction monitoring, account activity, product performance.</li>
+                <li>Designed dashboards for Private Bankers, Branch Managers, Wealth Advisors based on business requirements and client reporting needs.</li>
+                <li>Developed dashboards with <strong>MoM/YoY analysis</strong>, KPI tracking across banking products (checking, savings, CDs, loans).</li>
+                <li>Queried and analyzed <strong>1M+ transaction records</strong> using SQL for data validation, trend analysis, anomaly detection.</li>
+                <li>Automated ETL and data preparation workflows using SQL, Augr, improving data quality and reporting efficiency.</li>
+              </ul>
             </div>
           </div>
 
-          <div class="project" style="flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem;">
-            <div style="flex: 1;">
-              <h3 style="margin: 0; color: var(--clr-primary);">Atrina Technologies</h3>
-              <p style="margin-bottom: 0; font-size: 0.85rem;"><strong>Data Engineer</strong></p>
+          <div class="project" style="display: flex; flex-direction: column; gap: 1rem; padding: 2.5rem; margin-top: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(13, 148, 136, 0.2); padding-bottom: 1rem; margin-bottom: 0.5rem;">
+              <div>
+                <h3 style="margin: 0; font-size: 1.5rem; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Atrina Technologies</h3>
+                <p style="margin: 0.3rem 0 0 0; font-size: 1.05rem; color: var(--clr-fg-alt); font-weight: 500;">Data Engineer</p>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-size: 0.85rem; font-family: 'Space Grotesk', monospace; background: rgba(13, 148, 136, 0.1); padding: 0.4rem 1rem; border-radius: 20px; color: var(--clr-accent); border: 1px solid rgba(13, 148, 136, 0.3);">04/2023 - 03/2025</span>
+              </div>
             </div>
-            <div style="flex: 2;">
-              <p style="font-size: 0.95rem;">Developed <strong>30+ ETL pipelines on GCP</strong> to centralize multi-source data into BigQuery. Optimized SQL queries on <strong>5M+ records</strong> to reduce execution time by 30%, supporting large-scale campaign analysis.</p>
-            </div>
-            <div style="text-align: right; flex: 1;">
-              <p style="font-size: 0.9rem; opacity: 0.8;">04/2023 - 03/2025</p>
+            
+            <div style="width: 100%;">
+              <ul class="experience-list">
+                <li>Built and maintained <strong>30+ ETL pipelines</strong> on GCP (Airflow, Cloud Functions, Scheduler) for 1Finance, ensuring reliable and timely data availability for analytics.</li>
+                <li>Consolidated data from APIs, PostgreSQL, GCP Storage into <strong>BigQuery</strong>, creating a centralized dataset (customer, meeting, advisory data) used by analytics and product teams.</li>
+                <li>Optimized SQL queries on <strong>5M+ records</strong>, reducing execution time by <strong>~30%</strong> and enabling faster reporting and ad-hoc analysis.</li>
+                <li>Supported customer segmentation, A/B testing, campaign analysis by preparing clean datasets and sharing insights, helping stakeholders make data-driven decisions.</li>
+                <li>Built dashboards using Power BI, Looker Studio to track customer activity, advisor performance, key metrics for business and product teams.</li>
+              </ul>
             </div>
           </div>
         </div>
