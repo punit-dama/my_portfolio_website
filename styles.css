@@ -594,12 +594,50 @@ input:checked + .slider .clouds {
   right: 2rem;
   background: var(--grad-primary);
   color: #010409;
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 25px rgba(13, 148, 136, 0.4);
   z-index: 100;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+.scroll-top--show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(13, 148, 136, 0.6);
+  filter: brightness(1.1);
+}
+
+.scroll-top__icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -2px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-top:hover .scroll-top__icon {
+  transform: translateY(-3px);
+}
+
+.scroll-top__text {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-family: 'Space Grotesk', sans-serif;
 }

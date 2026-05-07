@@ -46,9 +46,9 @@ btnHamburger.parentElement.addEventListener('click', toggleNav)
 const scrollUp = () => {
   const btnScrollTop = document.querySelector('.scroll-top')
   if (body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    btnScrollTop.style.display = 'flex'
+    btnScrollTop.classList.add('scroll-top--show')
   } else {
-    btnScrollTop.style.display = 'none'
+    btnScrollTop.classList.remove('scroll-top--show')
   }
 }
 
