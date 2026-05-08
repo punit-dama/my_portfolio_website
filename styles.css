@@ -314,6 +314,31 @@ main {
   font-size: 0.85rem;
 }
 
+.experience__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(13, 148, 136, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience__date {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .experience__header {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+  
+  .experience__date {
+    text-align: left;
+  }
+}
+
 .project__stack {
   display: flex;
   flex-wrap: wrap;
