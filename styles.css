@@ -329,13 +329,29 @@ main {
 
 @media (max-width: 600px) {
   .experience__header {
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    gap: 0.5rem;
   }
   
   .experience__date {
-    text-align: left;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .experience__date span {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.6rem !important;
+    white-space: nowrap;
+  }
+
+  .experience__header h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .experience__header p {
+    font-size: 0.9rem !important;
   }
 }
 
