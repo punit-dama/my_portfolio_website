@@ -112,10 +112,8 @@ body {
 }
 
 /* Comet Effect */
-#comet {
+.comet {
   position: fixed;
-  top: 10%;
-  left: -200px;
   width: 4px;
   height: 4px;
   background: #fff;
@@ -123,25 +121,51 @@ body {
   box-shadow: 0 0 20px #fff, 0 0 40px #10b981;
   z-index: -1;
   opacity: 0;
-  animation: cometMoveSide 25s linear infinite;
 }
 
-#comet::after {
+.comet::after {
   content: '';
   position: absolute;
   top: 50%;
-  left: 0;
   width: 180px;
   height: 1px;
-  background: linear-gradient(to right, rgba(16, 185, 129, 0.6), transparent);
   transform: translateY(-50%);
 }
 
-@keyframes cometMoveSide {
-  0% { transform: translateX(0) translateY(0) rotate(-10deg); opacity: 0; }
+#comet1 {
+  top: -100px;
+  left: -200px;
+  animation: cometMoveLtoR 18s linear infinite;
+}
+
+#comet1::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(16, 185, 129, 0.6), transparent);
+}
+
+#comet2 {
+  top: -100px;
+  right: -200px;
+  animation: cometMoveRtoL 25s linear infinite 7s;
+}
+
+#comet2::after {
+  left: 0;
+  background: linear-gradient(to right, rgba(16, 185, 129, 0.6), transparent);
+}
+
+@keyframes cometMoveLtoR {
+  0% { transform: rotate(45deg) translateX(0); opacity: 0; }
   5% { opacity: 1; }
   95% { opacity: 1; }
-  100% { transform: translateX(120vw) translateY(10vh) rotate(-10deg); opacity: 0; }
+  100% { transform: rotate(45deg) translateX(150vw); opacity: 0; }
+}
+
+@keyframes cometMoveRtoL {
+  0% { transform: rotate(315deg) translateX(0); opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { transform: rotate(315deg) translateX(-150vw); opacity: 0; }
 }
 
 /* Space Particles */
@@ -411,17 +435,59 @@ main {
 
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: -2px;
+  gap: 12px;
+}
+
+.logo__brand {
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: -1px;
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.logo__brand span {
+  -webkit-text-fill-color: #ffffff;
+}
+
+.logo__tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-accent);
+  background: rgba(13, 148, 136, 0.1);
+  padding: 2px 8px;
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateX(-15px) scale(0.8);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  letter-spacing: 2px;
+  transform: translateX(-5px);
+}
+
+.logo:hover .logo__brand {
+  transform: scale(1.05);
+}
+
+.logo:hover .logo__tag {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  box-shadow: 0 0 15px rgba(13, 148, 136, 0.3);
 }
 
 /* About Section */
