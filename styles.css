@@ -411,68 +411,17 @@ main {
 
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  letter-spacing: -3px;
-}
-
-.logo span {
-  color: var(--clr-primary);
-  display: inline-block;
-  transition: all 0.4s ease;
-  position: relative;
-}
-
-.logo::after {
-  content: '{data}';
-  position: absolute;
-  right: -55px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--clr-accent);
-  letter-spacing: 1px;
-  opacity: 0;
-  transform: translateX(-15px);
-  transition: all 0.4s ease;
-  pointer-events: none;
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  letter-spacing: 5px;
-  transform: translateX(-10px);
-  text-shadow: 0 0 15px rgba(13, 148, 136, 0.3);
-}
-
-.logo:hover span {
-  transform: scale(1.1) rotate(-5deg);
-  color: var(--clr-accent);
-}
-
-.logo:hover::after {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.logo::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 70%);
-  z-index: -1;
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.logo:hover::before {
-  opacity: 1;
-  transform: scale(2);
+  transform: scale(1.1);
 }
 
 /* About Section */
